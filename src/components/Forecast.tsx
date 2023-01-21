@@ -15,8 +15,8 @@ const Forecast = ({ data, setForecast }: Props) => {
   const today = data.list[0];
   console.log(data);
   return (
-    <div className="anaDiv">
-      <div className="w-[300px]">
+    <div className="anaDiv flex flex-col items-center ">
+      <div className="w-[300px] flex flex-col justify-center mb-5">
         <section className="text-center">
           <h2 className="text-2xl font-black">
             {data.name} <span className="font-thin ml-2">{data.country}</span>
@@ -53,19 +53,20 @@ const Forecast = ({ data, setForecast }: Props) => {
         </section>
 
         <section className="flex flex-wrap justify-between">
-          <div>
+          <div className="flex flex-col items-center">
             <Sunrise /> <span>{getSunTime(data.sunrise)}</span>
           </div>
-          <div>
+          <div className="flex flex-col items-center">
             <Sunset /> <span>{getSunTime(data.sunset)}</span>
           </div>
         </section>
       </div>
-      <div className="text-center">
-        <button onClick={() => setForecast(null)}>Go Back</button>
+      <InfoBox data={data}/>
+      <div className="text-center border-2 w-20 rounded-md hover:bg-gradient-to-br from-green-500  to-gray-300 border-green-900 ">
+        <button className="text-center font-bold" onClick={() => setForecast(null)}>Go Back</button>
       </div>
       <div>
-        <InfoBox data={data}/>
+        
       </div>
     </div>
   );

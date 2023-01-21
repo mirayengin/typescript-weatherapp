@@ -59,7 +59,7 @@ const useForecast = () => {
     }
   }, [city]);
   return {
-    handleChange, handleSubmit,term, options,setCity,forecast,setForecast
+    handleChange, handleSubmit,term, options,setCity,forecast,setForecast, setTerm
   }
 }
 

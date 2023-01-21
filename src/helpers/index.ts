@@ -19,6 +19,12 @@ export const getHumidityValue = (level: number): string => {
 
   return 'Lots of moisture, uncomfortable air'
 }
+export const getFeelLike = (level: number): string => {
+  if (level <= 10) return 'The weather cold'
+  if (level > 10 && level <= 25) return 'The weather warm'
+
+  return 'The weather hot'
+}
 
 export const getVisibilityValue = (number: number): string => {
   if (number <= 50) return 'Dangerously foggy'
@@ -41,8 +47,8 @@ export const getSunTime = (timestamp: number): string => {
 }
 
 export const getPop = (value: number): string => {
-  if (value <= 0.33) return 'Low probability'
-  if (value > 0.33 && value <= 0.66) return 'Moderate probability'
+  if (value <= 10) return 'Low probability, clouds at less than 30%'
+  if (value > 11 && value <= 20) return 'Moderate probability, clouds at between  30% and 60%'
 
-  return 'High probability'
+  return 'High probability, clouds at more than 60%'
 }
