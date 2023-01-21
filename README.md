@@ -61,9 +61,9 @@ To create an advanced weather app with React, TypeScript and TailwindCSS
 
 ## Screenshot
 
-<p align="center">
-<a href="https://typescript-weatherapp-mirayengin.vercel.app/"><img src="https://user-images.githubusercontent.com/109613328/211223378-ed67d12b-aae8-4a64-9b62-10baeea02e75.gif" alt="screenshot"></a>
-</p>
+
+![Form](./typescript-weatherapp.gif)
+
 
 ## Links
 
